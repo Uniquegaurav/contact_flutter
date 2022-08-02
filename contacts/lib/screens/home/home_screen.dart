@@ -1,7 +1,8 @@
-import 'package:contacts/util/contact_provider.dart';
+// import 'package:contacts/controllers/contact_controller.dart';
 import 'package:contacts/screens/home/home_screen_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,11 +19,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ChangeNotifierProvider(
-        create: ((context) => ContactProvider()),
-        child: const HomeScreenWidget(),
-      ),
+    return const GetMaterialApp(
+      home: HomeScreenWidget(),
     );
   }
 }
